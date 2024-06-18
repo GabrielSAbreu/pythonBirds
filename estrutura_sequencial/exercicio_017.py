@@ -10,7 +10,13 @@ linha('=','Calculadora quantidade tinta')
 metros_quadrados = float(input('Informe a área a ser pintada em m²: '))
 litros = metros_quadrados / 6
 
-latas_18 = 80
-galoes = 25
+latas_18 = litros / 18
+if latas_18 < 1:
+    latas_18 = 1
+galoes = litros / 3.6
+if galoes < 1:
+    galoes = 1
 
-print(f' Área a ser pintada {metros_quadrados} litros necessários {litros}')
+print(f'Para pintar uma área de {metros_quadrados}m² você pode utilizar:')
+print(f'{round(latas_18)} lata(s) de 18 L = R${latas_18 * 80:.2f}')
+print(f'{round(galoes)} galoes de 3.6 L = R${galoes * 25:.2f}')
