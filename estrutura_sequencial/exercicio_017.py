@@ -5,18 +5,26 @@
     comprar apenas galões de 3,6 litros;
     misturar latas e galões, de forma que o desperdício de tinta seja menor. Acrescente 10% de folga e sempre arredonde os valores para cima, isto é, considere latas cheias. '''
 from cabecalho import linha
+import math
+
 linha('=','Calculadora quantidade tinta')
 
-metros_quadrados = float(input('Informe a área a ser pintada em m²: '))
+metros_quadrados = 200 #float(input('Informe a área a ser pintada em m²: '))
 litros = metros_quadrados / 6
 
-latas_18 = litros / 18
-if latas_18 < 1:
-    latas_18 = 1
-galoes = litros / 3.6
-if galoes < 1:
-    galoes = 1
+latas_18 = math.ceil(litros / 18)
+
+galoes = math.ceil(litros / 3.6)
+
+#calculo otimizado
+n_de_latas = math.floor(litros / 18)
+quantidade_latas = n_de_latas * 80
+litros_faltantes = litros % 18
+n_de_galoes = math.ceil(litros_faltantes / 3.6)
+quantidade_galoes = n_de_galoes * 25
+valor_total = quantidade_latas +  quantidade_galoes
 
 print(f'Para pintar uma área de {metros_quadrados}m² você pode utilizar:')
-print(f'{round(latas_18)} lata(s) de 18 L = R${latas_18 * 80:.2f}')
-print(f'{round(galoes)} galoes de 3.6 L = R${galoes * 25:.2f}')
+print(f'{latas_18} lata(s) de 18 L = R${latas_18 * 80:.2f}')
+print(f'{galoes} galoes de 3.6 L = R${galoes * 25:.2f}')
+print(f'Você pode utilizar {n_de_latas} de 18 l + {n_de_galoes} de 3.6 l, no valor de R$ {valor_total}')
