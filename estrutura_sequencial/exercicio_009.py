@@ -2,7 +2,7 @@
 
     C = 5 * ((F-32) / 9). '''
 
-from cabecalho import linha
+from estrutura_decisao.cabecalho import linha
 linha('#','Conversor F para C')
 
 f = float(input('Informe a temperatura em Fahrenheit: '))

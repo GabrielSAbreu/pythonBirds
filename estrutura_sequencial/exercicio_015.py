@@ -12,7 +12,7 @@ calcule os descontos e o salário líquido, conforme a tabela abaixo:
 - Sindicato ( 5%) : R$
 = Salário Liquido : R$
 Obs.: Salário Bruto - Descontos = Salário Líquido.'''
-from cabecalho import linha
+from estrutura_decisao.cabecalho import linha
 
 linha('_','Calculadora salarial plus')
 valor_hora = float(input('Informe quanto você ganha por hora: R$ '))

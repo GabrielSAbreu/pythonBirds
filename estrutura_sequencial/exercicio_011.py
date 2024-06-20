@@ -2,7 +2,7 @@
     o produto do dobro do primeiro com metade do segundo .
     a soma do triplo do primeiro com o terceiro.
     o terceiro elevado ao cubo. '''
-from cabecalho import linha
+from estrutura_decisao.cabecalho import linha
 linha('*','Calculando números inteiros e reais ')
 
 num_1 = int(input('Informe o 1º número inteiro: '))

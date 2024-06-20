@@ -6,7 +6,7 @@ João precisa que você faça um programa que leia a variável peso (peso de pei
  multa que João deverá pagar. Imprima os dados do programa com as mensagens adequadas.
 
 '''
-from cabecalho import linha
+from estrutura_decisao.cabecalho import linha
 linha('_',"Calculadora de multa")
 
 peso = float(input('Informe o peso em kg: '))

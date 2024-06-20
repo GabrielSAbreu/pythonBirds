@@ -2,7 +2,7 @@
 
     Para homens: (72.7*h) - 58
     Para mulheres: (62.1*h) - 44.7 '''
-from cabecalho import linha
+from estrutura_decisao.cabecalho import linha
 linha('_',"Peso ideal por genero")
 
 h_cm = float(input('Informe sua altura em cm: '))

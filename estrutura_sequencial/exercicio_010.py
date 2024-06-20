@@ -1,7 +1,7 @@
 '''Faça um Programa que peça a temperatura em graus Celsius, transforme e mostre em graus Fahrenheit.
 C = 5 * ((F-32) / 9) '''
 
-from cabecalho import linha
+from estrutura_decisao.cabecalho import linha
 linha('_', " Conversor C para F")
 
 c = float(input('Informe a temperatura em graus C: '))
