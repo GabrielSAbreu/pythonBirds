@@ -18,4 +18,4 @@ elif num_2 > num_3:
 
 else:
     print(f'{num_3} foi o maior número informado')
-    
+
