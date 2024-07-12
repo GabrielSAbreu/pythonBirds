@@ -18,4 +18,8 @@ class Quadrado:
     def retornarLado_e_Area():
         pass
 
-    
+if __name__ == '__main__':
+
+    forma = Quadrado(2)
+    forma.valorLado(2)
+    forma.mudaValorLado()
